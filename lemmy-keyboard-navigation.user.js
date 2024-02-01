@@ -230,7 +230,7 @@ let backgroundHexLight = settings.backgroundHexLight;
 let expandOption = settings.expandOption;
 
 // Set selected entry colors
-var backgroundColor = `${backgroundHexDark}`;
+const backgroundColor = `darkslategray`;
 var textColor = 'white';
 if (document.getElementById("app").getAttribute("data-bs-theme") === "light") {
   backgroundColor = `${backgroundHexLight}`;
@@ -238,16 +238,16 @@ if (document.getElementById("app").getAttribute("data-bs-theme") === "light") {
 }
 
 // Set navigation keys with keycodes here: https://www.toptal.com/developers/keycode
-let nextKey = 'ArrowDown';
-let prevKey = 'ArrowUp';
-let nextPageKey = 'ArrowRight';
-let prevPageKey = 'ArrowLeft';
+let nextKey = 'KeyK';
+let prevKey = 'KeyJ';
+let nextPageKey = 'KeyM';
+let prevPageKey = 'KeyN';
 
 if (vimKeyNavigation) {
-  nextKey = 'KeyJ';
-  prevKey = 'KeyK';
-  nextPageKey = 'KeyL';
-  prevPageKey = 'KeyH';
+  nextKey = 'KeyK';
+  prevKey = 'KeyJ';
+  nextPageKey = 'KeyH';
+  prevPageKey = 'KeyG';
 }
 
 const expandKey = `${settings.kb_expand}`;
@@ -294,11 +294,11 @@ let modalMode = 0;
 console.log(`modalMode: ${modalMode}`);
 
 // Stop arrows from moving the page if not using Vim navigation
-window.addEventListener("keydown", function(e) {
-  if (["ArrowUp", "ArrowDown"].indexOf(e.code) > -1 && !vimKeyNavigation) {
-    e.preventDefault();
-  }
-}, false);
+//window.addEventListener("keydown", function(e) {
+  //if (["ArrowUp", "ArrowDown"].indexOf(e.code) > -1 && !vimKeyNavigation) {
+    //e.preventDefault();
+//  }
+//}, false);
 
 // Remove scroll animations
 document.documentElement.style = "scroll-behavior: auto";
