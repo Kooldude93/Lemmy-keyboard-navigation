@@ -57,7 +57,7 @@ function options(open) {
         expandOption: "both",
         backgroundHexDark: "#373737",
         backgroundHexLight: "#dadbdd",
-        kb_expand: "KeyX",
+        kb_expand: "KeyL",
         kb_comments: "KeyC",
         kb_openLink: "Enter",
         kb_parent: "KeyP",
@@ -81,7 +81,7 @@ function options(open) {
         m_saved: "KeyS",
         m_userpage: "KeyU",
         m_inbox: "KeyI",
-        m_options: "KeyO",
+        m_options: "Digit0",
         s_search: "Period"
       },
       getSettingsFromLocalStorage()
